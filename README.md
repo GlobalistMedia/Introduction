@@ -39,7 +39,18 @@ Our platform is organized into four interdependent systems:
 🌐 URL: [hq.globalist.live](https://hq.globalist.live/)
 
 ---
+## 🧠 Globalist Storytelling  
+**Purpose**: A creative hub for mission-driven storytelling and digital narratives.  
 
+**Highlights**:  
+- Dedicated space for social impact stories and brand campaigns  
+- Seamless content collaboration with clients (intake + review workflows)  
+- Showcases projects, team, and creative process  
+- Subscription-based storytelling packages (monthly/quarterly)  
+
+🌐 URL: [brands.globalist.live](https://brands.globalist.live/) 
+
+---
 ## 📊 Globalist Media Suite (Coming Q3 2025)  
 **Purpose**: A creator-first SaaS platform for producing, managing, and distributing digital content across channels.  
 **Core Modules**:
@@ -90,7 +101,7 @@ This repo demonstrates GitHub capabilities through:
 - **Backend**: Nest.js
 - **Database**: MongoDB
 - **Auth**: Firebase / Clerk.dev
-- **Deployment**: Vercel (frontend), Railway / Render (backend)
+- **Deployment**:  AWS
 - **AI Tools**: OpenAI, custom NLP models
 
 ---
@@ -99,8 +110,9 @@ This repo demonstrates GitHub capabilities through:
 
 We are currently in:
 - ✅ **Phase 2** for Globalist Live
-- 🛠 **V1 development** of Media Suite (June–July 2025)
+- 🛠 **V1 development** of Media Suite
 - ✅ **Launched**: Globalist HQ (Marketing & Intake)
+- ✅ **Launched**: Globalist storytelling (Marketing & Intake)
 
 ---
 
