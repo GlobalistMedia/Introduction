@@ -109,7 +109,7 @@ We are currently in:
 This demo repository is maintained by the Globalist DevOps team.
 If you're contributing or testing pipelines, please follow standard PR and code review procedures.
 
-For feedback, please email: [info@globalist.live](mailto:info@globalist.live)
+For feedback, please email: [Team@globalist.live](mailto:Team@globalist.live)
 
 ---
 
