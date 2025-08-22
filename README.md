@@ -78,22 +78,28 @@ Access: Private only (Restricted by role) [admin.globalist.live](https://admin.g
 
 ---
 
-## 🛠️ This Repository
+##  Branching Strategy & Environments
 
-This repo demonstrates GitHub capabilities through:
+To improve our development workflow and code quality, we are adopting a branching strategy with two main branches:
 
-### Files
-- `index.html`: Main demo landing page
-- `style.css`: Basic styling for prototype UI
-- `.github/workflows/`: Contains CI/CD automation scripts
+- **dev**: All new features and updates are pushed here first. This branch is deployed to a staging/QA environment where the team and QA can test and verify changes before production.
+- **main** (or **master**): This branch contains production-ready, stable code. Only thoroughly tested and approved changes from `dev` are merged here for production release.
 
-### GitHub Actions Workflows
-| Workflow       | Purpose                                  |
-|----------------|------------------------------------------|
-| `auto-assign.yml` | Automatically assigns reviewers to PRs |
-| `proof-html.yml`  | Builds and validates static HTML       |
+**Branch Protections:**
+- Both `main` and `dev` branches are protected to prevent accidental direct merges or force pushes. All changes should go through pull requests and code review.
 
----
+**Workflow:**
+1. Developers create feature branches from `dev`.
+2. Once a feature is complete, open a PR into `dev` for review and testing.
+3. The `dev` branch is automatically deployed to a staging/QA environment.
+4. After successful QA, changes are merged from `dev` into `main` for production deployment.
+
+**Syncing Branches:**
+After any PR is merged from `dev` to `main`, we immediately sync `dev` with the latest changes from `main`. This ensures both branches remain up to date and prevents divergence.
+
+This process ensures higher code quality and safer releases.
+
+
 
 ## 📦 Technologies Used
 
