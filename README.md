@@ -1,5 +1,4 @@
 ![Auto Assign](https://github.com/GlobalistMedia/demo-repository/actions/workflows/auto-assign.yml/badge.svg)
-![Proof HTML](https://github.com/GlobalistMedia/demo-repository/actions/workflows/proof-html.yml/badge.svg)
 
 # 🌍 Welcome to the Globalist LLC
 
