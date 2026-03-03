@@ -1,2 +1,28 @@
-- name: Proof HTML
-  uses: anishathalye/proof-html@v2.2.3
+name: Proof HTML
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  proof-html:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-ruby@v4
+        with:
+          ruby-version: '3.2'
+
+      - run: bundle install
+
+      - name: Build site
+        run: bundle exec jekyll build
+
+      - name: Proof HTML
+        uses: anishathalye/proof-html@v2.2.3
+        with:
+          directory: ./_site
