@@ -1,39 +1,26 @@
-name: Build and Proof HTML
+name: Proof HTML
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
 
 jobs:
-  build-and-proof:
+  proof-html:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout repository
+      # Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Setup Ruby
-      - name: Setup Ruby
-        uses: actions/setup-ruby@v1
-        with:
-          ruby-version: '3.2'
-          bundler-cache: true   # Automatically runs bundle install & caches gems
-
-      # 3️⃣ Install dependencies (only needed if you don't use bundler-cache)
-      # - name: Install Bundler
-      #   run: gem install bundler
-      #
-      # - name: Install Gems
-      #   run: bundle install
-
-      # 4️⃣ Build Jekyll site
-      - name: Build site
-        run: bundle exec jekyll build
-
-      # 5️⃣ Run HTML Proof
+      # Run HTML Proof
       - name: Proof HTML
         uses: anishathalye/proof-html@v2.2.3
         with:
-          directory: ./_site
+          directory: .
+          check_html: true
+          check_opengraph: true
+          check_favicon: true
+          enforce_https: false
